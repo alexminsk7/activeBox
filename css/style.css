@@ -7,6 +7,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 /*Flex Framework*/ 
 .main_flex {display:flex;display:-webkit-flex;-webkit-flex-flow:row wrap;flex-flow:row wrap;} 
 .main_flex__nowrap{display:flex;display:-webkit-flex;-webkit-flex-flow:row nowrap;flex-flow:row nowrap;} 
@@ -61,7 +62,7 @@ a, a:hover, button, button:hover, .anime {
 	transition: all 200ms linear;
 	cursor: pointer;
 	text-decoration: none;
-	border: none;
+	/* border: none; */
 }
 li {
 	list-style: none;
@@ -77,7 +78,8 @@ p {
 ============= */
 .container {
 	width: 100%;
-	max-width: 1170px;
+	max-width: 1200px;
+	padding: 0 1.0714rem;
 	/* outline: 1px solid red; */
 }
 
@@ -94,10 +96,6 @@ p {
 .header__inner {
 	padding: 2.7143rem 0;
 	font-family: 'Special Elite', sans-serif;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
 	-ms-align-items: center;
@@ -108,10 +106,6 @@ p {
 /* nav
 ============ */
 .nav {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 }
 .nav__link {
@@ -138,7 +132,9 @@ p {
 	justify-content: center;
 	height: 750px;
 	padding-top: 7.1429rem;
-	background: #31354f url(../img/bg.jpg) center center no-repeat / cover;
+	background: #31354f url(../img/bg.jpg) center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 .intro__inner {
 	width: 100%;
@@ -177,4 +173,174 @@ p {
 }
 .btn--red:hover {
 	background-color: #dd3434;	
+}
+
+/* features
+============ */
+.features {
+	padding-top: 7.1429rem;
+	padding-bottom: 5.3572rem;
+}
+.features__item {
+	margin: 1.7857rem 0;
+	width: 33.333%;
+	padding: 0 2.6rem;
+}
+.features__icon {
+	margin-bottom: 1.4286rem;
+}
+.features__title {
+	color: #2d3033;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 1.4286rem;
+}
+.features__text {
+	font-size: 1rem;
+	color: #6c7279;
+	line-height: 1.5;
+}
+
+/* projects
+============ */
+.projects__item {
+	width: 25%;
+	height: 350px;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+.projects__item:hover .projects__content {
+	opacity: 1;
+	cursor: pointer;
+}
+.projects__photo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate3d(-50%, -50%, 0);
+}
+.projects__content {
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	background-color: rgba(232, 69, 69, .9);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: 0;
+	-webkit-transition: opacity .3s linear;
+	-o-transition: opacity .3s linear;
+	transition: opacity .3s linear;
+}
+.projects__title {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: .5rem;
+}
+.projects__text {
+	font-size: 1rem;
+	color: #fff;
+}
+
+/* team
+============ */
+.team {
+	padding: 7.1429rem 0 5rem;
+}
+.team__inner {
+	margin: 0 -1.0714rem;
+}
+.team__item {
+	width: 25%;
+	padding: 0 1.0714rem;
+	margin-bottom: 2rem;
+}
+.team__photo {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1.4286rem;
+}
+.team__name {
+	color: #2d3033;
+	font-size: 1.5714rem;
+	margin-bottom: 0.5714rem;
+}
+.team__prof {
+	font-size: 0.9286rem;
+	color: #e84545;
+	margin-bottom: 1rem;
+}
+.team__text {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #6c7279;
+	margin-bottom: 1rem;
+}
+
+/* social
+============ */
+.social__link {
+	width: 2.8571rem;
+	height: 2.8571rem;
+	border: 1px solid #e8ecee;
+	margin-right: 0.2857rem;
+	background-color: #fff;
+}
+.social__link svg {
+	fill: gray;
+}
+.social__link:hover {
+	background-color: #e8ecee;
+}
+.social__link:hover svg {
+	fill: #000;
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+/* reviews
+============ */
+.reviews {
+	background-color: #53354a;
+	overflow: hidden;
+}
+.reviews__photo {
+	width: 50%;
+	height: 500px;
+	position: relative;
+}
+.reviews__img {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	/* height: 100%; */
+	z-index: 1;
+	transform: translateY(-43%);
+}
+.reviews__content {
+	width: 50%;
+	padding-left: 5.7143rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.reviews__text {
+	font-family: 'Cardo', sans-serif;
+	font-style: italic;
+	font-size: 2.5714rem;
+	line-height: 1.2;
+	color: #fff;
+	margin-bottom: 1.5rem;
+}
+.reviews__author {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #fff;
 }
