@@ -1,0 +1,180 @@
+/* main settings
+================= */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/*Flex Framework*/ 
+.main_flex {display:flex;display:-webkit-flex;-webkit-flex-flow:row wrap;flex-flow:row wrap;} 
+.main_flex__nowrap{display:flex;display:-webkit-flex;-webkit-flex-flow:row nowrap;flex-flow:row nowrap;} 
+.flex__jcontent_between {justify-content:space-between;-webkit-justify-content:space-between;} 
+.flex__jcontent_start{justify-content:flex-start;-webkit-justify-content:flex-start;}
+.flex__jcontent_end{justify-content:flex-end;-webkit-justify-content:flex-end;} 
+.flex__jcontent_center{justify-content:center;-webkit-justify-content:center;} 
+.flex__jcontent_around{justify-content:space-around;-webkit-justify-content:space-around;} 
+.flex__jcontent_between{justify-content:space-between;-webkit-justify-content:space-between;} 
+.flex__auto {flex:auto;-webkit-flex:auto;-ms-flex:auto;} 
+.flex__align-items_start{align-items:flex-start;-webkit-align-items:flex-start;} 
+.flex__align-items_end{align-items:flex-end;-webkit-align-items:flex-end;} 
+.flex__align-items_baseline{align-items:baseline;-webkit-align-items:baseline;} 
+.flex__align-items_stretch{align-items:stretch;-webkit-align-items:stretch;} 
+.flex__align-items_center{align-items:center;-webkit-align-items:center;} 
+.flex__align-content_flex-start{align-content:flex-start;-webkit-align-content:flex-start;} 
+.flex__align-content_flex-end{align-content:flex-end;-webkit-align-content:flex-end;} 
+.flex__align-content_space-between{align-content:space-between;-webkit-align-content:space-between;} 
+.flex__align-content_center{align-content:center;-webkit-align-content:center;} 
+.flex__align-content_space-around{align-content:space-around;-webkit-align-content:space-around;} 
+.flex__align-content_stretch{align-content:stretch;-webkit-align-content:stretch;} 
+.flex__flex-grow_01{flex-grow:1;-webkit-flex-grow:1;} 
+.flex__flex-grow_02{flex-grow:2;-webkit-flex-grow:2;} 
+.flex__flex-grow_03{flex-grow:3;-webkit-flex-grow:3;} 
+.flex__flex-grow_04{flex-grow:4;-webkit-flex-grow:4;}
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	color: #6c7279;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+.aligner {
+	text-align: center;
+}
+.centro {
+	margin: 0px auto;
+}
+.upper {
+	text-transform: uppercase;
+}
+.bold {
+	font-weight: 700;
+}
+.light {
+	font-weight: 300;
+}
+.white {
+	color: #fff;
+}
+a, a:hover, button, button:hover, .anime {
+	transition: all 200ms linear;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+}
+li {
+	list-style: none;
+}
+h1, h2, h3, h4 {
+	margin: 0;
+}
+p {
+	margin: 0 0 10px;
+}
+
+/* container
+============= */
+.container {
+	width: 100%;
+	max-width: 1170px;
+	/* outline: 1px solid red; */
+}
+
+/* header
+=============== */
+.header {
+	width: 100%;
+	height: 7.1429rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+.header__inner {
+	padding: 2.7143rem 0;
+	font-family: 'Special Elite', sans-serif;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	border-bottom: 1px solid #515369;
+}
+
+/* nav
+============ */
+.nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.nav__link {
+	margin-left: 3.5714rem;
+	font-size: 0.9286rem;
+	font-weight: 700;
+	color: #fff;
+	opacity: .75;
+	transition: opacity .2s linear;
+	letter-spacing: .3px;
+}
+.nav__link:first-child {
+	margin-left: 0;
+}
+.nav__link:hover {
+	opacity: 1;
+}
+
+/* intro
+============ */
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 750px;
+	padding-top: 7.1429rem;
+	background: #31354f url(../img/bg.jpg) center center no-repeat / cover;
+}
+.intro__inner {
+	width: 100%;
+	max-width: 69.2857rem;
+	text-align: center;
+}
+.intro__title {
+	font-size: 4.5714rem;
+	line-height: 1.1;
+	font-weight: 700;
+	color: #fff;
+	margin: 0 0 2.1429rem;
+}
+.intro__subtitle {
+	font-size: 1.5714rem;
+	color: #fff;
+	line-height: 1.5;
+	font-weight: 400;
+	margin-bottom: 4.2857rem;
+}
+
+/* button
+============ */
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 1rem 2.8571rem;
+	font-size: 0.9286rem;
+	font-family: inherit;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 2px;
+}
+.btn--red {
+	background-color: #e84545;
+}
+.btn--red:hover {
+	background-color: #dd3434;	
+}
