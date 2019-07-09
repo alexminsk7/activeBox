@@ -93,6 +93,17 @@ p {
 	left: 0;
 	z-index: 1000;
 }
+.header.fixed {
+	position: fixed;
+	background-color: #31344e;
+	opacity: .9;
+	height: auto;
+}
+.header.fixed .header__inner {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 0;
+}
 .header__inner {
 	padding: 2.7143rem 0;
 	font-family: 'Special Elite', sans-serif;
@@ -331,6 +342,16 @@ p {
 	background-color: #53354a;
 	overflow: hidden;
 }
+.reviews__slider {
+	height: 500px;
+	overflow: hidden;
+}
+.reviews__slider.slick-initialized {
+	height: auto;
+}
+.reviews__item {
+	overflow: hidden;
+}
 .reviews__photo {
 	width: 50%;
 	height: 500px;
@@ -363,6 +384,38 @@ p {
 	font-size: 1rem;
 	font-weight: 700;
 	color: #fff;
+}
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0 0 .7rem;
+	list-style: none;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.slick-dots li {
+	margin: 0 .5rem;
+}
+.slick-dots button {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: #fff;
+	border: 0;
+	padding: 0;
+	font-size: 0;
+	color: transparent;
+	opacity: .5;
+}
+.slick-dots button:focus {
+	outline: none;
+}
+.slick-dots .slick-active button {
+	opacity: 1;
 }
 
 /* download
@@ -481,6 +534,24 @@ p {
 	/* nav */
 	.nav {
 		display: none;
+		flex-direction: column;
+		width: 100%;
+		text-align: right;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: #31344e;
+	}
+	.nav.show {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+	}
+	.nav__link {
+		padding: .8rem 1rem;
+		font-size: 1.2rem;
 	}
 	/* burger */
 	.burger {
